@@ -39,7 +39,6 @@ export const Interactive3DSkills = () => {
               <InteractiveSkillOrb
                 position={skill.position}
                 color={skill.color}
-                skillName={skill.name}
                 scale={0.8}
               />
             </Float>
