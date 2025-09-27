@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
+import { SkillsScene } from './3d/3DScenes';
+import { Interactive3DSkills } from './3d/Interactive3DSkills';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,7 +50,10 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 relative">
+      {/* 3D Skills Scene */}
+      <SkillsScene />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -95,6 +100,11 @@ const Skills = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Interactive 3D Skills Showcase */}
+        <div className="mt-16">
+          <Interactive3DSkills />
         </div>
       </div>
     </section>

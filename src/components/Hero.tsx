@@ -1,5 +1,6 @@
 import { ArrowDown, Download, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { HeroScene } from './3d/3DScenes';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -11,6 +12,9 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* 3D Background Scene */}
+      <HeroScene />
+      
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
       

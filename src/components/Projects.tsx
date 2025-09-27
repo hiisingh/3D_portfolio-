@@ -2,6 +2,7 @@ import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { ProjectsScene } from './3d/3DScenes';
 
 // Import project images
 import projectEcommerce from '@/assets/project-ecommerce.jpg';
@@ -57,7 +58,10 @@ const Projects = () => {
   const otherProjects = projects.filter(project => !project.featured);
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="py-20 bg-muted/30 relative">
+      {/* 3D Projects Scene */}
+      <ProjectsScene />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
